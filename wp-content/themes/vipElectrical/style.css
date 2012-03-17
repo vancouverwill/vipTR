@@ -118,6 +118,7 @@ body {
 #secondary {
 	float: right;
 	margin-right: 7.6%;
+        margin-top: 15px;
 	width: 18.8%;
 }
 
@@ -349,6 +350,9 @@ body {
 }
 #page {
 	background: #fff;
+        -moz-box-shadow: 0 0 8px #888;
+        -webkit-box-shadow: 0 0 8px#888;
+        box-shadow: 0 0 8px #888;
 }
 
 /* Headings */
@@ -358,14 +362,16 @@ h1,h2,h3,h4,h5,h6 {
 hr {
 	background-color: #ccc;
 	border: 0;
-	height: 1px;
+        line-height: 16px;
 	margin-bottom: 1.625em;
 }
 
 /* Text elements */
 p {
         color:#666666;
-	margin-bottom: 1.625em;
+        font-size: 13px;
+	line-height: 15px;
+	margin-bottom: 5px;
         font-family: 'Open Sans', sans-serif;
 }
 
@@ -533,7 +539,7 @@ a:hover {
 
 #branding {
 	border-top: 0px solid #bbb;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	position: relative;
 	z-index: 9999;
 }
@@ -575,7 +581,7 @@ a:hover {
         background: url(images/header_phone.png) no-repeat;
         float:right;
         height:25px;
-        left:759px;
+        left:659px;
         position: absolute;
         text-indent: -3000px;
         top: 55px;
@@ -605,17 +611,22 @@ a:hover {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;*/
-        background:url(./images/NAV_BAR_&_SHADOW.png) repeat-x center top;
+        background:url(./images/nav_bar.png) repeat-x center top;
 	clear: both;
 	display: block;
 	float: left;
-	margin: 0 auto 6px;
+        height: 38px;
+	margin: 0 auto 0px;
 	width: 100%;
+        
+        -moz-box-shadow: 0 2px 3px #333;
+        -webkit-box-shadow: 0 2px 3px #333;
+        box-shadow: 0 2px 3px #333333;
 }
 #access ul {
 	font-size: 13px;
 	list-style: none;
-	margin: 0 0 0 -0.8125em;
+	margin: 0 0 0 0em;
 	padding-left: 0;
 }
 #access li {
@@ -626,7 +637,7 @@ a:hover {
 #access a {
 	color: #eee;
 	display: block;
-	line-height: 3.333em;
+	line-height: 38px;
 	padding: 0 1.2125em;
 	text-decoration: none;
 }
@@ -638,7 +649,7 @@ a:hover {
 	float: left;
 	margin: 0;
 	position: absolute;
-	top: 3.333em;
+	top: 33px;
 	left: 0;
 	width: 188px;
 	z-index: 99999;
@@ -648,32 +659,34 @@ a:hover {
 	top: 0;
 }
 
-#access ul ul{
-    
-    
+ #access .children  li{
+    background: url(./images/nav_bar_pull_down.png) repeat transparent;
+    height: 33px;
+    width:100%;
 }
 
 
 #access ul ul a {
-	background: url(./images/nav_bar_pull_down.png) repeat transparent;
+	
 	border-bottom: 1px dotted #ddd;
 	color: #fff;
 	font-size: 13px;
 	font-weight: normal;
-	height: 33px;
+	height:33px;
 	line-height: 1.4em;
-	padding: 10px 10px;
+	padding: 5px 10px;
 	width: 168px;
 }
 #access li:hover > a,
 #access ul ul :hover > a,
 #access a:focus {
 	background: url(./images/nav_bar_pull_down_over.png) repeat;
+        height:33px;
 }
 #access li:hover > a,
 #access a:focus,
 #access .current_page_item > a{
-	background: url(./images/navbar_over.png) repeat-x; /* Show a solid color for older browsers */
+	background: url(./images/nav_bar_over.png) repeat-x; /* Show a solid color for older browsers */
 	/*background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
@@ -751,7 +764,7 @@ a:hover {
 
 #main {
 	clear: both;
-	padding: 1.625em 0 0;
+	padding: 0 0;
 }
 .page-title {
 	color: #666;
@@ -821,7 +834,7 @@ a:hover {
 }
 .entry-content,
 .entry-summary {
-	padding: 1.625em 0 0;
+	padding: 2px 0 0;
 }
 .entry-content h1,
 .entry-content h2,
@@ -1006,7 +1019,8 @@ img[class*="align"],
 img[class*="wp-image-"],
 #content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
 	border: 1px solid #ddd;
-	padding: 6px;
+        margin-bottom: 4px;
+	padding: 3px;
 }
 .wp-caption img {
 	border-color: #eee;
@@ -1103,8 +1117,8 @@ object {
 	right: 0;
 	text-align: center;
 	text-decoration: none;
-	width: 43px;
-	height: 36px;
+	width: 0;
+	height: 0;
 }
 .entry-header .comments-link a:hover,
 .entry-header .comments-link a:focus,
@@ -2264,7 +2278,7 @@ p.comment-form-comment {
 ----------------------------------------------- */
 
 #colophon {
-        background:url(images/VIP_FOOTER_BAND_W_SHADOW.jpg) repeat-x center top;
+        
 	clear: both;
 }
 #supplementary {
@@ -2295,12 +2309,13 @@ p.comment-form-comment {
 
 /* Site Generator Line */
 #site-generator {
-	background: #f9f9f9;
+	background:url('images/footer.png') repeat-x center top;
 	border-top: 1px solid #ddd;
 	color: #666;
+        height:31px;
 	font-size: 12px;
 	line-height: 2.2em;
-	padding: 2.2em 0.5em;
+	padding: 0;
 	text-align: center;
 }
 #site-generator a {
@@ -2605,11 +2620,26 @@ p.comment-form-comment {
 		border-top: none;
 		box-shadow: none;
 	}
+        
+        #mainContentImage {
+            background:url(./images/home_page.png) no-repeat;
+            height:338px;
+            width:900px;
+        }
+        
 	#primary {
 		float: left;
 		margin: 0;
 		width: 100%;
 	}
+        
+        .mainContentImage {
+            height:338px;
+            width:900px;
+            background:url(./images/home_page.png) no-repeat;
+            background:red;
+        }
+        
 	#content {
 		margin: 0;
 		width: auto;

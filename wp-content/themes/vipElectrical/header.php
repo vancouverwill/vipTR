@@ -69,7 +69,7 @@
 ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php vipelectrical_body_class(); ?>>
     <div id="topPage">
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
@@ -96,7 +96,7 @@
                                     $header_image = get_header_image();
                                     if ( ! empty( $header_image ) ) :
                             ?>
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                            <!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <?php
                                             // The header image
                                             // Check if this is a post or page, if it has a thumbnail, and if it's a big one
@@ -109,7 +109,7 @@
                                             else : ?>
                                             <img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
                                     <?php endif; // end check for featured image or standard header ?>
-                            </a>
+                            </a>-->
                             <?php endif; // end check for removed header image ?>
 
                             <?php
@@ -125,8 +125,12 @@
                                     <?php //get_search_form(); ?>
                             <?php endif; ?>
 
-
+                
             </header><!-- #branding -->
 
 
             <div id="main">
+                <div class="mainContentImage" style="height:338px;
+            width:900px;
+            background:url(/wp-content/uploads/home_page.png) no-repeat;
+            ">&nbsp;</div>
