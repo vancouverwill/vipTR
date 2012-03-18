@@ -132,6 +132,38 @@ body {
 	position: relative;
 	width: auto;
 }
+   
+#primary .homeContent{
+          float: left;
+        margin: 0;
+        width: 550px;
+}
+
+.singular .homeContent  .entry-header, .singular .homeContent  .entry-content{
+    width:475px;
+}
+
+.homeSidebar{
+    float:left;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-top: 100px;
+    position:relative;
+    width:280px;
+}
+
+.pagedivider, #pageDivider{
+    background: url(images/dot_divider.png) no-repeat;
+    height:247px;
+    left:0px;
+    position:absolute;
+    width:8px;
+}
+
+.homeSidebar img{
+    margin-top:50px;
+}
+
 .singular .entry-header,
 .singular .entry-content,
 .singular footer.entry-meta,
@@ -765,7 +797,18 @@ a:hover {
 #main {
 	clear: both;
 	padding: 0 0;
+        position:relative;
 }
+
+#mainFold{
+    background: no-repeat url(images/main_image_fold.png);
+    height:114px;
+    position:absolute;
+    left:-13px;
+    top: 197px;
+    width:13px;
+}
+
 .page-title {
 	color: #666;
 	font-size: 10px;
