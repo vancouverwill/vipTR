@@ -663,14 +663,14 @@ a:hover {
 }
 #access li {
 	float: left;
-        margin-right: 25px;
+        margin-right: 0px;
 	position: relative;
 }
 #access a {
 	color: #eee;
 	display: block;
 	line-height: 38px;
-	padding: 0 1.2125em;
+	padding: 0 2.2125em;
 	text-decoration: none;
 }
 #access ul ul {
@@ -681,7 +681,7 @@ a:hover {
 	float: left;
 	margin: 0;
 	position: absolute;
-	top: 33px;
+	top: 38px;
 	left: 0;
 	width: 188px;
 	z-index: 99999;
@@ -704,7 +704,7 @@ a:hover {
 	color: #fff;
 	font-size: 13px;
 	font-weight: normal;
-	height:33px;
+	height:22px;
 	line-height: 1.4em;
 	padding: 5px 10px;
 	width: 168px;
@@ -713,7 +713,7 @@ a:hover {
 #access ul ul :hover > a,
 #access a:focus {
 	background: url(./images/nav_bar_pull_down_over.png) repeat;
-        height:33px;
+        height:38px;
 }
 #access li:hover > a,
 #access a:focus,
