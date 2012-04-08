@@ -130,6 +130,7 @@
 
 
             <div id="main">
+                <div id="mainFold">&nbsp;</div>
                 <div class="mainContentImage" style="height:338px;
             width:900px;
             background:url(/wp-content/uploads/home_page.png) no-repeat;

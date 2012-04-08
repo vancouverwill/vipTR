@@ -1,5 +1,8 @@
 <?php
 
+update_option('siteurl','http://www.vipelectrical.dreamhosters.com');
+update_option('home','http://www.vipelectrical.dreamhosters.com');
+
 //if ( function_exists('register_sidebars') )
 //register_sidebars(3);
 
