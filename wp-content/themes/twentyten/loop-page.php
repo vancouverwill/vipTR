@@ -10,7 +10,7 @@
  * This can be overridden in child themes with loop-page.php.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
+ * @subpackage Twenty_Eleven
  * @since Twenty Ten 1.2
  */
 ?>
