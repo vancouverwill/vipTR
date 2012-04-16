@@ -16,7 +16,10 @@ if (has_post_thumbnail( $post->ID )) {
  
 //print_r($image);
  ?>
-
+<ul>
+	<h2>categories page</h2>
+<?php wp_list_categories('orderby=name'); ?> 
+</ul>
 
 
 
@@ -99,7 +102,7 @@ if (has_post_thumbnail( $post->ID )) {
 			<span class="comments-link"><?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentyeleven' ) . '</span>', __( '<b>1</b> Reply', 'twentyeleven' ), __( '<b>%</b> Replies', 'twentyeleven' ) ); ?></span>
 			<?php endif; // End if comments_open() ?>
 			-->
-			
+
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- #entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->

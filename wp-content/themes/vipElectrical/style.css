@@ -147,7 +147,7 @@ body {
     float:left;
     padding-bottom: 50px;
     padding-left: 50px;
-    padding-top: 100px;
+    padding-top: 48px;
     position:relative;
     width:280px;
 }
@@ -161,7 +161,7 @@ body {
 }
 
 .homeSidebar img{
-    margin-top:50px;
+    margin-top:0px;
 }
 
 .singular .entry-header,
@@ -2830,9 +2830,12 @@ p.comment-form-comment {
 	margin-right: 7.6%;
 }
 
-
 .page-id-21 .entry-title{
 	display:none;
+}
+
+.home .entry-content{
+	padding-top:18px;
 }
 
 .blog #secondary{
