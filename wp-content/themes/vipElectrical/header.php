@@ -69,8 +69,8 @@
 ?>
 </head>
 
-<body <?php vipelectrical_body_class(); ?>>
-    <div id="topPage">
+<body <?php // body_class(); ?> <?php vipelectrical_body_class(); ?> >
+<h2><?php will_get_page_template(); ?></h2>    <div id="topPage">
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>

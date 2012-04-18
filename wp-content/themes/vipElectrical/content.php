@@ -16,10 +16,7 @@ if (has_post_thumbnail( $post->ID )) {
  
 //print_r($image);
  ?>
-<ul>
-	<h2>categories page</h2>
-<?php wp_list_categories('orderby=name'); ?> 
-</ul>
+
 
 
 
@@ -48,7 +45,7 @@ if (has_post_thumbnail( $post->ID )) {
 				<img height="215px" width="335px" src="<?php echo $image[0]; ?>" />
 			</div>
 
-			<div id="blogContentBox" style="float:left; width:200px;">
+			<div class="blogContentBox" style="">
 				<?php if ( is_sticky() ) : ?>
 					<hgroup>
 						<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
