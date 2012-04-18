@@ -39,3 +39,40 @@ function twentyeleven_posted_on() {
 		get_the_author()
 	);
 }
+
+/**
+ * Retrieve path of page template in current or parent template.
+ *
+ * Will first look for the specifically assigned page template
+ * The will search for 'page-{slug}.php' followed by 'page-id.php'
+ * and finally 'page.php'
+ *
+ * @since 1.5.0
+ *
+ * @return string
+ */
+function will_get_page_template() {
+	$id = get_queried_object_id();
+	$template = get_post_meta($id, '_wp_page_template', true);
+	$pagename = get_query_var('pagename');
+
+	if ( !$pagename && $id > 0 ) {
+		// If a static page is set as the front page, $pagename will not be set. Retrieve it from the queried object
+		$post = get_queried_object();
+		$pagename = $post->post_name;
+	}
+
+	if ( 'default' == $template )
+		$template = '';
+
+	$templates = array();
+	if ( !empty($template) && !validate_file($template) )
+		$templates[] = $template;
+	if ( $pagename )
+		$templates[] = "page-$pagename.php";
+	if ( $id )
+		$templates[] = "page-$id.php";
+	$templates[] = 'page.php';
+
+	return get_query_template( 'page', $templates );
+}

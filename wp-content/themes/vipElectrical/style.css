@@ -2838,10 +2838,54 @@ p.comment-form-comment {
 	padding-top:18px;
 }
 
-.blog #secondary{
-	//isplay:none;
+.blog #secondary, .category #secondary{
+	display:none;
 }
 
-.blog #content{
+.blog #content, .category #content{
 	width:90%;
+}
+
+.blog_categories li{
+	color:#fff;
+	float: left;
+	list-style:none;
+}
+
+.blog_categories li a{
+	background:gray;
+	color:#fff;
+	margin-right:4px;
+	padding:3px 8px;
+}
+
+.blog_categories li a:hover, .blog_categories li.current-cat a{
+	background:#9D0B0F;
+	color:#fff;
+	text-decoration:none;
+}
+
+#blog_header{
+	clear: both;
+	height: 60px;
+}
+
+#blog_header .entry-title{
+	clear: both;
+	float:left;
+    font-size: 26px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 0;
+    margin-top: 5px;
+    padding-bottom: 0.3em;
+    padding-top: 9px;
+}
+
+.blogContentBox{
+	float:left; margin-left: 20px; width:400px;
+}
+
+.blogContentBox .entry-title {
+	line-height:26px;
 }
