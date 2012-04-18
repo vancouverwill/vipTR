@@ -15,7 +15,9 @@
 
 get_header(); ?>
 
-		<div id="primary">
+
+
+		<div id="primary" class="singleSideBarPage">
 			<div id="content" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -29,4 +31,4 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer(); ?>  
