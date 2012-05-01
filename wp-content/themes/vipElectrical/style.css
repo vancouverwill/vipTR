@@ -1221,11 +1221,11 @@ article.format-status .entry-content {
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
 	border-bottom: none;
-	padding: 4.875em 0 0;
+	padding: 0 0 0;
 	position: relative;
 }
 .singular.page .hentry {
-	padding: 1.5em 0 0;
+	padding: 0em 0 0;
 }
 .singular .entry-title {
 	color: #000;
@@ -2839,7 +2839,8 @@ p.comment-form-comment {
 }
 
 .blog #content, .category #content{
-	width:90%;
+	margin-left: 40px;
+    width: 820px;
 }
 
 ul.blog_categories{
