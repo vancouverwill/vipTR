@@ -168,7 +168,7 @@ body {
 .singular .entry-content,
 .singular footer.entry-meta,
 .singular #comments-title {
-	margin: 0 auto;
+	margin: 0 40px;
 	width: 100%;
 }
 
