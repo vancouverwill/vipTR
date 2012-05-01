@@ -128,9 +128,9 @@ body {
 }
 .singular #content,
 .left-sidebar.singular #content {
-	margin: 0 7.6%;
+	margin: 0 40px;
 	position: relative;
-	width: auto;
+	width: 820px;
 }
    
 #primary .homeContent{
@@ -893,7 +893,7 @@ a:hover {
 .entry-content h2,
 .comment-content h1,
 .comment-content h2 {
-	color: #000;
+	color: #595859;
 	font-weight: bold;
 	margin: 0em;
 	padding:0;
