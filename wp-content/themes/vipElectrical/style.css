@@ -135,7 +135,7 @@ body {
    
 #primary .homeContent{
           float: left;
-        margin: 10px 0 0;
+        margin: 10px 0 0 40px;
         width: 550px;
 }
 
@@ -146,7 +146,7 @@ body {
 .homeSidebar{
     float:left;
     padding-bottom: 50px;
-    padding-left: 50px;
+    padding-left: 10px;
     padding-top: 37px;
     position:relative;
     width:280px;
@@ -168,7 +168,7 @@ body {
 .singular .entry-content,
 .singular footer.entry-meta,
 .singular #comments-title {
-	margin: 0 40px;
+	margin: 0 0px;
 	width: 100%;
 }
 
