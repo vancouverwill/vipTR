@@ -14,7 +14,7 @@ get_header(); ?>
 				<div id="blog_header">
 					<h1 class="entry-title" id="blogTitle">News/Media</h1>
 					<ul class="blog_categories">
-						<?php wp_list_categories('orderby=name&current_category=1&title_li=' ); ?> 
+						<?php wp_list_categories('orderby=name&current_category=0&title_li=' ); ?> 
 					</ul>
 					<div style="clear:both">&nbsp;</div>
 				</div>
