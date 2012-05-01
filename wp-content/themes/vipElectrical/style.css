@@ -809,7 +809,7 @@ a:hover {
 #mainFold {
 	height:0px;
 }
-.page-id-102 #mainFold{
+.home #mainFold{
     background: no-repeat url(images/main_image_fold.png);
     height:114px;
     position:absolute;
