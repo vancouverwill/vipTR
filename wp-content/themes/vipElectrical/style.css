@@ -2860,7 +2860,8 @@ ul.blog_categories{
 	padding:3px 8px;
 }
 
-.blog_categories li a:hover, .blog_categories li.current-cat a{
+.blog_categories li a:hover
+, .blog_categories li.current-cat a{
 	background:#9D0B0F;
 	color:#fff;
 	text-decoration:none;
