@@ -138,4 +138,4 @@
             <div id="main">
                 <div id="mainFold">&nbsp;</div>
                <!-- <div class="mainContentImage" style="background:url(<? echo $image_url; ?>);">&nbsp;</div> -->
-               <img src="<? echo $image_url; ?>" />
+               <img class="mainContentImage" src="<? echo $image_url; ?>" />
