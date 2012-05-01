@@ -135,7 +135,7 @@ body {
    
 #primary .homeContent{
           float: left;
-        margin: 0;
+        margin: 10px 0 0;
         width: 550px;
 }
 
@@ -147,7 +147,7 @@ body {
     float:left;
     padding-bottom: 50px;
     padding-left: 50px;
-    padding-top: 27px;
+    padding-top: 37px;
     position:relative;
     width:280px;
 }
