@@ -76,3 +76,16 @@ function will_get_page_template() {
 
 	return get_query_template( 'page', $templates );
 }
+
+function enable_more_buttons($buttons) {
+  $buttons[] = 'hr';
+ 
+  /* 
+  Repeat with any other buttons you want to add, e.g.
+	  $buttons[] = 'fontselect';
+	  $buttons[] = 'sup';
+  */
+ 
+  return $buttons;
+}
+add_filter("mce_buttons", "enable_more_buttons");
