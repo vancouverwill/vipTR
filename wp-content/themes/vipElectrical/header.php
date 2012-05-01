@@ -128,10 +128,14 @@
                 
             </header><!-- #branding -->
 
+            <?php
 
+            $image_id=get_post_thumbnail_id();
+            $image_url = wp_get_attachment_image_src($image_id,'large');
+            $image_url=$image_url[0];
+
+            ?>
             <div id="main">
                 <div id="mainFold">&nbsp;</div>
-                <div class="mainContentImage" style="height:338px;
-            width:900px;
-            background:url(/wp-content/uploads/home_page.png) no-repeat;
-            ">&nbsp;</div>
+               <!-- <div class="mainContentImage" style="background:url(<? echo $image_url; ?>);">&nbsp;</div> -->
+               <img src="<? echo $image_url; ?>" />

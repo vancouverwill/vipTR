@@ -806,7 +806,10 @@ a:hover {
         position:relative;
 }
 
-#mainFold{
+#mainFold {
+	height:0px;
+}
+.page-id-102 #mainFold{
     background: no-repeat url(images/main_image_fold.png);
     height:114px;
     position:absolute;
@@ -2676,24 +2679,14 @@ p.comment-form-comment {
 		box-shadow: none;
 	}
         
-        #mainContentImage {
-            background:url(./images/home_page.png) no-repeat;
-            height:338px;
-            width:900px;
-        }
+    
         
 	#primary {
 		float: left;
 		margin: 0;
 		width: 100%;
 	}
-        
-        .mainContentImage {
-            height:338px;
-            width:900px;
-            background:url(./images/home_page.png) no-repeat;
-            background:red;
-        }
+       
         
 	#content {
 		margin: 0;
@@ -2899,3 +2892,9 @@ ul.blog_categories{
 .blogContentBox .entry-title {
 	line-height:26px;
 }
+
+.page-id-2 .mainContentImage {
+        eight:338px;
+        idth:900px;
+        
+    }
