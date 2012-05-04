@@ -136,7 +136,7 @@ body {
 #primary .homeContent{
           float: left;
         margin: 10px 0 0 40px;
-        width: 550px;
+        width: 500px;
 }
 
 .singular .homeContent  .entry-header, .singular .homeContent  .entry-content{
@@ -146,7 +146,7 @@ body {
 .homeSidebar{
     float:left;
     padding-bottom: 50px;
-    padding-left: 10px;
+    padding-left: 50px;
     padding-top: 37px;
     position:relative;
     width:280px;
@@ -2871,8 +2871,8 @@ ul.blog_categories{
 #blog_header{
 	clear: both;
 	height: 60px;
-	padding: 20px 0;
-	width:760px;
+	margin: 40px 0 30px;
+	width:820px;
 }
 
 #blog_header .entry-title{
@@ -2888,15 +2888,15 @@ ul.blog_categories{
 }
 
 .blogContentBox{
-	float:left; width:400px;
+	float:right; width:400px;
 }
 
 .blogContentBox .entry-title {
 	line-height:26px;
 }
 
-.page-id-2 .mainContentImage {
+.blog  .mainContentImage {
         eight:338px;
         idth:900px;
-        
+      	display:none;  
     }
