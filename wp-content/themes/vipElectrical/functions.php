@@ -3,6 +3,23 @@
 //if ( function_exists('register_sidebars') )
 //register_sidebars(3);
 
+add_action('init', 'create_post_type');
+function create_post_type() {
+    
+    register_post_type('jobs',
+        array(
+            'labels' => array(
+                'name' => 'Jobs',
+                'singular_name' => 'Job',
+                'menu_name' => 'Job Board',
+            ),   
+            'public' => true,
+            'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
+        )
+    );
+
+}
+
 function vipelectrical_body_classes(  ) {
 
 	if ( function_exists( 'is_multi_author' ) && ! is_multi_author() )
