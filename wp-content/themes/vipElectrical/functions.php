@@ -36,6 +36,13 @@ function vipelectrical_body_class( $class = '' ) {
 	echo 'class="' . join( ' ', get_body_class( $class ) ) . '"';
 }
 
+function the_content_as_string($more_link_text = null, $stripteaser = false) {
+	$content = get_the_content($more_link_text, $stripteaser);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	return $content;
+}
+
 
 /**
  * Prints HTML with meta information for the current post-date/time and author.
