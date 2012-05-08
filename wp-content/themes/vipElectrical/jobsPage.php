@@ -34,8 +34,10 @@ get_header(); ?>
 	$loop = new WP_Query( $args );
 	while ( $loop->have_posts() ) : $loop->the_post();
 
-		echo '<h3>' . the_title() . '</h3>';
+		
 		echo '<div class="entry-content">';
+		echo '<h2>' . the_title() . '</h2>';
+		echo '<h4>' . the_date() . '</h4>';
 		?>
 			<span class="sectionOne">
 				<? //echo strlen(the_content_as_string()); ?>

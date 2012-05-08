@@ -2955,3 +2955,13 @@ ul.blog_categories{
 	font-weight:bold;
 	text-decoration:none;
 }
+
+.page-template-jobsPage-php .entry-content {
+	border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.page-template-jobsPage-php .content-page{
+	border-bottom:0px;
+}
