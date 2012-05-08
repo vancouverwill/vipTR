@@ -2900,3 +2900,23 @@ ul.blog_categories{
         idth:900px;
       	display:none;  
     }
+
+.single-post .mainContentImage{
+	display: none;
+}
+
+.singular .entry-header .entry-meta {
+	font-size: 90%;
+	position: relative;
+}
+
+#content nav {
+    clear: both;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.single-post .singlePost .mainContentImage{
+	display: block;
+	width: 400px;
+}
