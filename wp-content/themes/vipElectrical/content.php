@@ -20,7 +20,7 @@ if (has_post_thumbnail( $post->ID )) {
 
 
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="content.php post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			
 
@@ -59,7 +59,9 @@ if (has_post_thumbnail( $post->ID )) {
 					<?php twentyeleven_posted_on(); ?>
 				</div><!-- .entry-meta -->
 
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
+				<span class="theContent">
+					<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
+				</span>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 			</div>
 		</div><!-- .entry-content -->
@@ -103,3 +105,5 @@ if (has_post_thumbnail( $post->ID )) {
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- #entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
+
+	

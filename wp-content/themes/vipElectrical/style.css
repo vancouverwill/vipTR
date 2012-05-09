@@ -128,15 +128,15 @@ body {
 }
 .singular #content,
 .left-sidebar.singular #content {
-	margin: 0 7.6%;
+	margin: 0 40px;
 	position: relative;
-	width: auto;
+	width: 820px;
 }
    
 #primary .homeContent{
           float: left;
-        margin: 0;
-        width: 550px;
+        margin: 10px 0 0 40px;
+        width: 500px;
 }
 
 .singular .homeContent  .entry-header, .singular .homeContent  .entry-content{
@@ -147,7 +147,7 @@ body {
     float:left;
     padding-bottom: 50px;
     padding-left: 50px;
-    padding-top: 48px;
+    padding-top: 37px;
     position:relative;
     width:280px;
 }
@@ -168,7 +168,7 @@ body {
 .singular .entry-content,
 .singular footer.entry-meta,
 .singular #comments-title {
-	margin: 0 auto;
+	margin: 0 0px;
 	width: 100%;
 }
 
@@ -392,18 +392,18 @@ h1,h2,h3,h4,h5,h6 {
 	clear: both;
 }
 hr {
-	background-color: #ccc;
-	border: 0;
-        line-height: 16px;
-	margin-bottom: 1.625em;
+	background: transparent;
+	border-top: 1px dotted;
+    line-height: 0px;
 }
 
 /* Text elements */
 p {
         color:#666666;
         font-size: 13px;
-	line-height: 15px;
-	margin-bottom: 5px;
+		line-height: 20px;
+		margin-bottom: 5px;
+		margin-top:10px;
         font-family: 'Open Sans', sans-serif;
 }
 
@@ -669,6 +669,7 @@ a:hover {
 #access a {
 	color: #eee;
 	display: block;
+	font-size: 13px;
 	line-height: 38px;
 	padding: 0 2.2125em;
 	text-decoration: none;
@@ -805,7 +806,10 @@ a:hover {
         position:relative;
 }
 
-#mainFold{
+#mainFold {
+	height:0px;
+}
+.home #mainFold{
     background: no-repeat url(images/main_image_fold.png);
     height:114px;
     position:absolute;
@@ -860,7 +864,7 @@ a:hover {
 }
 .entry-title,
 .entry-title a {
-	color: #222;
+	color: #595859;
 	text-decoration: none;
 }
 .entry-title a:hover,
@@ -889,7 +893,7 @@ a:hover {
 .entry-content h2,
 .comment-content h1,
 .comment-content h2 {
-	color: #000;
+	color: #595859;
 	font-weight: bold;
 	margin: 0em;
 	padding:0;
@@ -1217,21 +1221,23 @@ article.format-status .entry-content {
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
 	border-bottom: none;
-	padding: 4.875em 0 0;
+	padding: 0 0 0;
 	position: relative;
 }
 .singular.page .hentry {
-	padding: 1.5em 0 0;
+	padding: 0em 0 0;
 }
 .singular .entry-title {
 	color: #000;
 	font-size: 36px;
 	font-weight: bold;
-	line-height: 48px;
+	line-height: 36px;
 }
 .singular .entry-title,
 .singular .entry-header .entry-meta {
-	color: #6c6b6c;
+	color: #595859;
+	font-size: 29px;
+	font-weight: 700;
 	padding-right: 0;
 	width:90%;
 }
@@ -2673,24 +2679,14 @@ p.comment-form-comment {
 		box-shadow: none;
 	}
         
-        #mainContentImage {
-            background:url(./images/home_page.png) no-repeat;
-            height:338px;
-            width:900px;
-        }
+    
         
 	#primary {
 		float: left;
 		margin: 0;
 		width: 100%;
 	}
-        
-        .mainContentImage {
-            height:338px;
-            width:900px;
-            background:url(./images/home_page.png) no-repeat;
-            background:red;
-        }
+       
         
 	#content {
 		margin: 0;
@@ -2843,7 +2839,12 @@ p.comment-form-comment {
 }
 
 .blog #content, .category #content{
-	width:90%;
+	margin-left: 40px;
+    width: 820px;
+}
+
+ul.blog_categories{
+	float:right;
 }
 
 .blog_categories li{
@@ -2855,11 +2856,13 @@ p.comment-form-comment {
 .blog_categories li a{
 	background:gray;
 	color:#fff;
+	font-size: 14px;
 	margin-right:4px;
 	padding:3px 8px;
 }
 
-.blog_categories li a:hover, .blog_categories li.current-cat a{
+.blog_categories li a:hover
+, .blog_categories li.current-cat a{
 	background:#9D0B0F;
 	color:#fff;
 	text-decoration:none;
@@ -2868,6 +2871,8 @@ p.comment-form-comment {
 #blog_header{
 	clear: both;
 	height: 60px;
+	margin: 40px 0 30px;
+	width:820px;
 }
 
 #blog_header .entry-title{
@@ -2883,9 +2888,80 @@ p.comment-form-comment {
 }
 
 .blogContentBox{
-	float:left; margin-left: 20px; width:400px;
+	float:right; width:400px;
 }
 
 .blogContentBox .entry-title {
 	line-height:26px;
+}
+
+.blog  .mainContentImage {
+        eight:338px;
+        idth:900px;
+      	display:none;  
+    }
+
+.single-post .mainContentImage{
+	display: none;
+}
+
+.singular .entry-header .entry-meta {
+	font-size: 90%;
+	position: relative;
+}
+
+#content nav {
+    clear: both;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.single-post .singlePost .mainContentImage{
+	display: block;
+	width: 400px;
+}
+
+.subMenucomittmentMenu {
+	float: left;
+    margin-left: 20px;
+    padding-top: 80px;
+}
+
+.subMenucomittmentMenu li{
+	background: none repeat scroll 0 0 #c9c9c9;
+    list-style: none outside none;
+    margin-bottom: 1px;
+    width: 200px;
+}
+
+.subMenucomittmentMenu li.sel{
+	background: none repeat scroll 0 0 #808080;
+}
+
+.subMenucomittmentMenu a{
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-left: 7px;
+}
+
+.singleSideBarComittmentPage #content {
+	float: left;
+	width:600px;
+}
+
+.subMenucomittmentMenu a:focus,
+.subMenucomittmentMenu a:active,
+.subMenucomittmentMenu a:hover {
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.page-template-jobsPage-php .entry-content {
+	border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.page-template-jobsPage-php .content-page{
+	border-bottom:0px;
 }
