@@ -141,7 +141,7 @@ function hierarchical_submenu_get_children($post, $current_page, $menuId) {
             }
             // If the page has children and is the viewed page or one of its ancestors, get its children
             if (get_children($child->ID) && (in_array($child->ID, get_post_ancestors($current_page)) || ($child->ID == $current_page->ID))) {
-                $menu .= hierarchical_submenu_get_children($child, $current_page);
+                $menu .= hierarchical_submenu_get_children($child, $current_page, $menuId);
             }
             $menu .= "</li>\n";
         }
