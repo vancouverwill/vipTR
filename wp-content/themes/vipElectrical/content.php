@@ -46,24 +46,28 @@ if (has_post_thumbnail( $post->ID )) {
 			</div>
 
 			<div class="blogContentBox" style="">
-				<?php if ( is_sticky() ) : ?>
-					<hgroup>
-						<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-						<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
-					</hgroup>
-				<?php else : ?>
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-				<?php endif; ?>
+				<div class="blogExpandable"  data-hidden="true">
+					<?php if ( is_sticky() ) : ?>
+						<hgroup>
+							<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
+						</hgroup>
+					<?php else : ?>
+					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<?php endif; ?>
 
-				<div class="entry-meta">
-					<?php twentyeleven_posted_on(); ?>
-				</div><!-- .entry-meta -->
+					<div class="entry-meta">
+						<?php twentyeleven_posted_on(); ?>
+					</div><!-- .entry-meta -->
 
-				<span class="theContent">
-					<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
-				</span>
-				<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+					<span class="theContent">
+						<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
+					</span>
+					<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+				</div>
+				<a href="#" class="dynamic" >Read More</a>
 			</div>
+			
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 

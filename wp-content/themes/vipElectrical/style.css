@@ -543,7 +543,7 @@ a {
 a:focus,
 a:active,
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /* Assistive text */
@@ -663,7 +663,8 @@ a:hover {
 }
 #access li {
 	float: left;
-        margin-right: 0px;
+	list-style: none outside none;
+	margin-right: 0px;
 	position: relative;
 }
 #access a {
@@ -2964,4 +2965,8 @@ ul.blog_categories{
 
 .page-template-jobsPage-php .content-page{
 	border-bottom:0px;
+}
+
+li {
+	list-style: disc outside none;
 }
