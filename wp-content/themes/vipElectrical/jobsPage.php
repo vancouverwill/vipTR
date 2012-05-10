@@ -39,16 +39,13 @@ get_header(); ?>
 		echo '<h2>' . the_title() . '</h2>';
 		echo '<h4>' . the_date() . '</h4>';
 		?>
-			<span class="sectionOne">
+			<div class="sectionOne" data-hidden="true" >
 				<? //echo strlen(the_content_as_string()); ?>
-				<? echo substr(the_content_as_string(), 0, 200); ?>
-			</span>
-			<a href="#" >Read More</a>
-			<span class="sectionTwo hidden" data-hidden="true" >
-			<?php
-				echo substr(the_content_as_string(), 200, strlen(the_content_as_string()));
-			?>
-			</span>
+				<? echo the_content_as_string(); ?>
+				<a href="mailto:info@vipelectrical.com?Subject=<?php echo the_title(); ?>">Send Email</a>
+			</div>
+			<a href="#" class="dynamic" >Read More</a>
+			 
 		<?php
 		echo '</div>';
 	endwhile;
@@ -61,22 +58,25 @@ get_header(); ?>
 <script type="text/javascript">
 	//alert('wake up');
 	//jQuery('.entry-content').css('margin-bottom', '100px');
-	jQuery('.entry-content .sectionTwo').hide();
+	//jQuery('.entry-content .sectionTwo').hide();
 	// jQuery('.entry-content .sectionTwo').show();
 
-	jQuery('.entry-content a').click(function (e){
+	jQuery('.entry-content .sectionOne').css({height : '70px', overflow : 'hidden'});
+
+	jQuery('a.dynamic').click(function (e){
 		e.preventDefault();
 		 //jQuery(this).css('color', 'red');
 		 //e.css('font-size', '25px');
-		 var sectionTwo = jQuery(this).next();
+		 var sectionOne = jQuery(this).prev();
 
-		 if ( sectionTwo.data("hidden") === true ){
-		 	sectionTwo.show();
-		 	sectionTwo.data("hidden", false);
+		 if ( sectionOne.data("hidden") === true ){
+		 	// sectionOne.show();
+		 	sectionOne.css({ height : '100%'});
+		 	sectionOne.data("hidden", false);
 		 }
 		 else {
-		 	sectionTwo.hide();
-		 	sectionTwo.data("hidden", true);
+		 	sectionOne.css({height : '70px'});
+		 	sectionOne.data("hidden", true);
 		 }
 
 	});
