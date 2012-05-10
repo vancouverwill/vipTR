@@ -2846,7 +2846,7 @@ p.comment-form-comment {
 
 .categoriesHolder{
 	float:right;
-	width: 400px;
+	width: 425px;
 }
 
 ul.blog_categories{
@@ -2895,7 +2895,7 @@ ul.blog_categories{
 }
 
 .blogContentBox{
-	float:right; width:400px;
+	float:right; width:425px;
 }
 
 .blogContentBox .entry-title {
@@ -2975,6 +2975,7 @@ ul.blog_categories{
 }
 
 li {
+	font-size:13px;
 	list-style: disc outside none;
 }
 
