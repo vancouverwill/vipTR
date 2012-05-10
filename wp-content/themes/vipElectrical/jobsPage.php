@@ -71,10 +71,12 @@ get_header(); ?>
 
 		 if ( sectionOne.data("hidden") === true ){
 		 	// sectionOne.show();
+		 	jQuery(this).html("Hide");
 		 	sectionOne.css({ height : '100%'});
 		 	sectionOne.data("hidden", false);
 		 }
 		 else {
+		 	jQuery(this).html("Read More");
 		 	sectionOne.css({height : '70px'});
 		 	sectionOne.data("hidden", true);
 		 }

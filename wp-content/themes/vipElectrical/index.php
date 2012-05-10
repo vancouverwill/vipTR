@@ -66,18 +66,21 @@ get_header(); ?>
 	jQuery('.theContent').css('height','185px');
 	jQuery('.theContent').css('overflow','hidden');
 
-	jQuery('.blogContentBox').each(function(index, value){
-		// jQuery(this).css('background', 'red');
-		jQuery(this).append('<a href="" class="readMore">Read more' + index + '</p>');
+	// jQuery('.blogContentBox').each(function(index, value){
+	// 	// jQuery(this).css('background', 'red');
+	// 	jQuery(this).append('<a href="" class="readMore">Read more' + index + '</p>');
 
-	});
+	// });
+	var originalBoxHeight = '200px';
 
-	jQuery('.blogContentBox .readMore').click(function (e){
+	jQuery('.blogExpandable').css({height : originalBoxHeight, overflow : 'hidden'});
+
+	jQuery('a.dynamic').click(function (e){
 		e.preventDefault();
 		 //jQuery(this).css('color', 'red');
 		 //e.css('font-size', '25px');
-		 jQuery('.theContent').css('height','100%');
-		 jQuery(this).css('color', 'red');
+		 //jQuery('.theContent').css('height','100%');
+		 //jQuery(this).css('color', 'red');
 		 
 		 // var sectionTwo = jQuery(this).next();
 
@@ -89,6 +92,20 @@ get_header(); ?>
 		 // 	sectionTwo.hide();
 		 // 	sectionTwo.data("hidden", true);
 		 // }
+
+		 var sectionOne = jQuery(this).prev();
+
+		 if ( sectionOne.data("hidden") === true ){
+		 	// sectionOne.show();
+		 	jQuery(this).html("Hide");
+		 	sectionOne.css({ height : '100%'});
+		 	sectionOne.data("hidden", false);
+		 }
+		 else {
+		 	jQuery(this).html("Read More");
+		 	sectionOne.css({height : originalBoxHeight});
+		 	sectionOne.data("hidden", true);
+		 }
 
 	});
 </script>
