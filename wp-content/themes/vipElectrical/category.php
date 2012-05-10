@@ -13,9 +13,12 @@ get_header(); ?>
 			<div id="content" role="main">
 				<div id="blog_header">
 					<h1 class="entry-title" id="blogTitle">News/Media</h1>
-					<ul class="blog_categories">
-						<?php wp_list_categories('orderby=name&current_category=0&title_li=' ); ?> 
-					</ul>
+
+					<div class="categoriesHolder">
+						<ul class="blog_categories">
+							<?php wp_list_categories('orderby=name&current_category=0&title_li=' ); ?> 
+						</ul>
+					</div>
 					<div style="clear:both">&nbsp;</div>
 				</div>
 

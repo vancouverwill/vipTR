@@ -2844,8 +2844,14 @@ p.comment-form-comment {
     width: 820px;
 }
 
-ul.blog_categories{
+.categoriesHolder{
 	float:right;
+	width: 400px;
+}
+
+ul.blog_categories{
+	float: left;
+    margin: 0;
 }
 
 .blog_categories li{
@@ -2970,9 +2976,15 @@ ul.blog_categories{
 
 li {
 	list-style: disc outside none;
-
 }
 
 .page-template-jobsPage-php .singular.page .hentry{
 	   
+}
+
+.jobMail {
+	background: url(images/mail.png) 18px 0  no-repeat;
+	float: right;
+	font-size: 90%;
+	padding-top: 20px;
 }

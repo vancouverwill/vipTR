@@ -36,13 +36,18 @@ get_header(); ?>
 
 		
 		echo '<div class="entry-content">';
-		echo '<h2>' . the_title() . '</h2>';
+		
+		echo the_title('<h2>', '</h2>', false);
+
+		echo '<a class="jobMail" href="mailto:info@vipelectrical.com?Subject=<?php echo the_title(); ?>">Send Email</a>';
+
+
 		echo '<h4>' . the_date() . '</h4>';
 		?>
 			<div class="sectionOne" data-hidden="true" >
 				<? //echo strlen(the_content_as_string()); ?>
 				<? echo the_content_as_string(); ?>
-				<a href="mailto:info@vipelectrical.com?Subject=<?php echo the_title(); ?>">Send Email</a>
+				
 			</div>
 			<a href="#" class="dynamic" >Read More</a>
 			 
