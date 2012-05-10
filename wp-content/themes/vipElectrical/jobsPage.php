@@ -38,8 +38,13 @@ get_header(); ?>
 		echo '<div class="entry-content">';
 		
 		echo the_title('<h2>', '</h2>', false);
+		$themeDirectory = bloginfo('stylesheet_directory');
+		
 
-		echo '<a class="jobMail" href="mailto:info@vipelectrical.com?Subject=<?php echo the_title(); ?>">Send Email</a>';
+
+		echo '<a class="jobMail" href="mailto:info@vipelectrical.com?Subject=<?php echo the_title(); ?>">
+		<img src="/mail.png" />
+		 Send Email</a>';
 
 
 		echo '<h4>' . the_date() . '</h4>';

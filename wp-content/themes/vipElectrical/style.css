@@ -612,12 +612,12 @@ a:hover {
 #phone{    
         background: url(images/header_phone.png) no-repeat;
         float:right;
-        height:25px;
-        left:659px;
+        height:59px;
+        left:633px;
         position: absolute;
         text-indent: -3000px;
-        top: 55px;
-        width:195px;        
+        top: 35px;
+        width:227px;        
 }
 
 #branding img {
@@ -2984,8 +2984,14 @@ li {
 }
 
 .jobMail {
-	background: url(images/mail.png) 18px 0  no-repeat;
+	
 	float: right;
 	font-size: 90%;
-	padding-top: 20px;
+	
+}
+
+.jobMailImage {
+	background: url(images/mail.png) 0px 0  no-repeat;
+	height:19px;
+	width:26px;
 }
