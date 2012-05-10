@@ -372,7 +372,7 @@ body {
 ----------------------------------------------- */
 
 body, input, textarea {
-	color: #373737;
+	color: #666;
 	font: 15px 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
@@ -2893,16 +2893,13 @@ ul.blog_categories{
 }
 
 .blogContentBox .entry-title {
-	line-height:26px;
-}
-
-.blog  .mainContentImage {
+	line-height{
         eight:338px;
         idth:900px;
       	display:none;  
     }
 
-.single-post .mainContentImage{
+.single-post .mainContentImage, .category .mainContentImage, .archive .mainContentImage {
 	display: none;
 }
 
@@ -2918,7 +2915,7 @@ ul.blog_categories{
 }
 
 .single-post .singlePost .mainContentImage{
-	display: block;
+	display: none;
 	width: 400px;
 }
 
@@ -2964,9 +2961,15 @@ ul.blog_categories{
 }
 
 .page-template-jobsPage-php .content-page{
-	border-bottom:0px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 li {
 	list-style: disc outside none;
+
+}
+
+.page-template-jobsPage-php .singular.page .hentry{
+	   
 }
