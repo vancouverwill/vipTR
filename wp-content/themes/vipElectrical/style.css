@@ -2893,7 +2893,10 @@ ul.blog_categories{
 }
 
 .blogContentBox .entry-title {
-	line-height{
+	line-height:26px;
+}
+
+.blog .mainContentImage {
         eight:338px;
         idth:900px;
       	display:none;  
