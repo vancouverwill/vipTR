@@ -1,6 +1,6 @@
 <?php
 /**
- * Template  Name: Single Sidebar Markets Template
+ * Template Name: Single Sidebar Markets Template
  * Description: A Page Template that adds a sidebar to pages
  *
  * This is the template that displays all pages by default.
