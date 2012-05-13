@@ -38,7 +38,7 @@ if ($children) {
 	?>
 		<ul class="subMenucomittmentMenu">
 			<li class="<? echo $sel; ?>">
-				<a class="<? echo $sel; ?>" href="<?php echo $my_post->guid; ?>"> 
+				<a class="<? echo $sel; ?>" href="<?php echo WP_HOME . '?page_id='.$my_post->ID; ?>"> 
 					<!-- <pre><?php //print_r($my_post);?></pre> -->
 					<?php echo $my_post->post_title; ?>
 				</a>
