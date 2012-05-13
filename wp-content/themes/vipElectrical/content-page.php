@@ -15,7 +15,7 @@
 							 get_post_meta($post->ID , 'custom_title', $single = true)
 							 .'</h1>';
 						 } else { ?>
-		<h1 class="entry-title">some other junk<?php the_title(); ?></h1>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php } ?>
 	</header><!-- .entry-header -->
 
