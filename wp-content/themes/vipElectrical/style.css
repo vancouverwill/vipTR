@@ -2942,7 +2942,7 @@ ul.blog_categories{
     width: 200px;
 }
 
-.subMenucomittmentMenu li.sel{
+.subMenucomittmentMenu li.sel, .subMenucomittmentMenu li.current_page_item{
 	background: none repeat scroll 0 0 #808080;
 }
 
