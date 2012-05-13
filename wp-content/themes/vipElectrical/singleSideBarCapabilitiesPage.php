@@ -1,11 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
- * Template Name: Singe Sidebar Capabilties Template
 =======
  * Template Name: Singe Sidebar Capabilities Template
->>>>>>> 04700ac6cbcea27ec5d87e7ad96f3e36c39e23d3
- * Description: A Page Template that adds a sidebar to pages
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -22,18 +18,6 @@ get_header(); ?>
 
 
 		<div id="primary" class="singleSideBarComittmentPage">
-<<<<<<< HEAD
-			<?php
-$submenu = hierarchical_submenu($post, 'comittmentMenu');
-if ($submenu) {
-    echo $submenu;
-} else {
-	echo '<p>nothing to display</p>';
-    // Do something else
-}
-?>
-=======
-			
 <?php
 $my_id = CAPABILITIES_ID;
 $my_post = get_post($my_id);
@@ -62,8 +46,6 @@ if ($children) {
 		</ul>
 <?php } 
 ?>
-
->>>>>>> 04700ac6cbcea27ec5d87e7ad96f3e36c39e23d3
 			<div id="content" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -77,8 +59,6 @@ if ($children) {
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<<<<<<< HEAD
+
 <?php get_footer(); ?>  
-=======
-<?php get_footer(); ?>  
->>>>>>> 04700ac6cbcea27ec5d87e7ad96f3e36c39e23d3
+
