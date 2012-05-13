@@ -20,7 +20,11 @@
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php if ( is_front_page() ) { ?>
 						<!--<h2 class="entry-title"><?php the_title(); ?></h2>-->
-					<?php } else { ?>
+					<?php } if ( get_post_meta($post->ID , 'custom_title', $single = true) != null) { 
+							 echo '<h1 class="entry-title">' . 
+							 get_post_meta($post->ID , 'custom_title', $single = true)
+							 .'</h1>';
+						 } else { ?>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					<?php } ?>
 

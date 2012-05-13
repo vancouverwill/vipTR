@@ -153,7 +153,7 @@ body {
 }
 
 .pagedivider, #pageDivider{
-    background: url(images/dot_divider.png) no-repeat;
+    border-left: 1px solid #DDDDDD;
     height:247px;
     left:0px;
     position:absolute;
@@ -2942,7 +2942,7 @@ ul.blog_categories{
     width: 200px;
 }
 
-.subMenucomittmentMenu li.sel{
+.subMenucomittmentMenu li.sel, .subMenucomittmentMenu li.current_page_item{
 	background: none repeat scroll 0 0 #808080;
 }
 
