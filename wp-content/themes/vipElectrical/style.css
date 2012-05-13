@@ -2846,8 +2846,9 @@ p.comment-form-comment {
 }
 
 .categoriesHolder{
-	float:right;
-	width: 425px;
+	float: right;
+    margin-right: -25px;
+    width: 450px;
 }
 
 ul.blog_categories{
@@ -2911,6 +2912,13 @@ ul.blog_categories{
 
 .single-post .mainContentImage, .category .mainContentImage, .archive .mainContentImage {
 	display: none;
+}
+
+.single-post .mainContentImage{
+	display: block;
+	 margin-left: 40px;
+    margin-top: 40px;
+    max-width: 820px;
 }
 
 .singular .entry-header .entry-meta {
