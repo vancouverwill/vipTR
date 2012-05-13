@@ -10,7 +10,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php if ( get_post_meta($post->ID , 'custom_title', $single = true) != null) { 
+							 echo '<h1 class="entry-title">' . 
+							 get_post_meta($post->ID , 'custom_title', $single = true)
+							 .'</h1>';
+						 } else { ?>
+		<h1 class="entry-title">some other junk<?php the_title(); ?></h1>
+		<?php } ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content content-page">
