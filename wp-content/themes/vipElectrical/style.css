@@ -145,8 +145,9 @@ body {
 
 .homeSidebar{
     float:left;
+    margin-left: 21px;	
     padding-bottom: 50px;
-    padding-left: 50px;
+    padding-left: 40px;
     padding-top: 37px;
     position:relative;
     width:280px;

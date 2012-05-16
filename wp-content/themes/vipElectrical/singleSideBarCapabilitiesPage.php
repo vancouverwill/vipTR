@@ -35,12 +35,12 @@ else {
 if ($children) {
 	?>
 		<ul class="subMenucomittmentMenu">
-			<li class="<? echo $sel; ?>">
+<!--			<li class="<? echo $sel; ?>">
 				<a class="<? echo $sel; ?>" href="<?php echo WP_HOME . '?page_id='.$my_post->ID; ?>"> 
-					<!-- <pre><?php //print_r($my_post);?></pre> -->
+
 					<?php echo $my_post->post_title; ?>
 				</a>
-			</li>
+			</li> -->
 			<?php echo $children; ?>
 		</ul>
 <?php } 
