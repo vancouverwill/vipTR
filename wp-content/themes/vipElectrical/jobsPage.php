@@ -42,7 +42,7 @@ get_header(); ?>
 		
 
 
-		echo '<a class="jobMail" href="mailto:info@vipelectrical.com?Subject=' . the_title('','',false) .'">
+		echo '<a class="jobMail" href="mailto:info@vipelectrical.com.au?Subject=' . the_title('','',false) .'">
 		<img src="/mail.png" />
 		 Send Email</a>';
 
