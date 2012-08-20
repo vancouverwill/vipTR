@@ -29,8 +29,10 @@ get_header(); ?>
 			</div><!-- #content -->
                         <div class="homeSidebar">
                             <div class="pagedivider">&nbsp;</div>
-                            <a href=""><img src="/wp-content/uploads/TEXT_AREA_EMPLOYMENT_BOX.jpg"></a>
-                            <a href=""><img src="/wp-content/uploads/TEXT_AREA_CAPABILITY_BOX.jpg"></a>
+                            <a href="<?php echo WP_HOME . '?page_id='.EMPLOYMENT_ID; ?>"><img src="/wp-content/uploads/EMPLOYMENT_button.png"></a>
+                            <a href="<?php echo WP_HOME . 'VIPElectricalCapabilityStatement2012.pdf'; ?>">
+                            	<img src="/wp-content/uploads/TEXT_AREA_CAPABILITY_BOX.png">
+                            </a>
                         </div>
 		</div><!-- #primary -->
 

@@ -145,15 +145,16 @@ body {
 
 .homeSidebar{
     float:left;
+    margin-left: 21px;	
     padding-bottom: 50px;
-    padding-left: 50px;
+    padding-left: 40px;
     padding-top: 37px;
     position:relative;
     width:280px;
 }
 
 .pagedivider, #pageDivider{
-    background: url(images/dot_divider.png) no-repeat;
+    border-left: 1px solid #DDDDDD;
     height:247px;
     left:0px;
     position:absolute;
@@ -372,7 +373,7 @@ body {
 ----------------------------------------------- */
 
 body, input, textarea {
-	color: #373737;
+	color: #666;
 	font: 15px 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
@@ -543,7 +544,7 @@ a {
 a:focus,
 a:active,
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /* Assistive text */
@@ -612,12 +613,12 @@ a:hover {
 #phone{    
         background: url(images/header_phone.png) no-repeat;
         float:right;
-        height:25px;
-        left:659px;
+        height:59px;
+        left:633px;
         position: absolute;
         text-indent: -3000px;
-        top: 55px;
-        width:195px;        
+        top: 35px;
+        width:227px;        
 }
 
 #branding img {
@@ -665,7 +666,8 @@ a:hover {
 }
 #access li {
 	float: left;
-        margin-right: 0px;
+	list-style: none outside none;
+	margin-right: 0px;
 	position: relative;
 }
 #access a {
@@ -869,6 +871,11 @@ a:hover {
 	color: #595859;
 	text-decoration: none;
 }
+
+#blogTitle{
+	font-size: 27px;
+}
+
 .entry-title a:hover,
 .entry-title a:focus,
 .entry-title a:active {
@@ -990,6 +997,7 @@ dl.gallery-item {
 .entry-content img,
 .comment-content img,
 .widget img {
+	margin-bottom: -5px;
 	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
 }
 img[class*="align"],
@@ -2340,6 +2348,7 @@ p.comment-form-comment {
 #colophon {
         
 	clear: both;
+	margin-bottom: 50px;
 }
 #supplementary {
 	border-top: 1px solid #ddd;
@@ -2845,8 +2854,15 @@ p.comment-form-comment {
     width: 820px;
 }
 
+.categoriesHolder{
+	float: right;
+    margin-right: -25px;
+    width: 450px;
+}
+
 ul.blog_categories{
-	float:right;
+	float: left;
+    margin: 0;
 }
 
 .blog_categories li{
@@ -2890,20 +2906,116 @@ ul.blog_categories{
 }
 
 .blogContentBox{
-	float:right; width:400px;
+	float:right; width:425px;
 }
 
 .blogContentBox .entry-title {
 	line-height:26px;
 }
 
-.blog  .mainContentImage {
+.blog .mainContentImage {
         eight:338px;
         idth:900px;
       	display:none;  
     }
 
+
 .clear {
 	clear: both;
-	height: ;
+	height: 0px;
+}
+
+.single-post .mainContentImage, .category .mainContentImage, .archive .mainContentImage {
+	display: none;
+}
+
+.single-post .mainContentImage{
+	display: block;
+	 margin-left: 40px;
+    margin-top: 40px;
+    max-width: 820px;
+}
+
+.singular .entry-header .entry-meta {
+	font-size: 90%;
+	position: relative;
+}
+
+#content nav {
+    clear: both;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.single-post .singlePost .mainContentImage{
+	display: none;
+	width: 400px;
+}
+
+.subMenucomittmentMenu {
+	float: left;
+    margin-left: 20px;
+    padding-top: 80px;
+}
+
+.subMenucomittmentMenu li{
+	background: none repeat scroll 0 0 #c9c9c9;
+    list-style: none outside none;
+    margin-bottom: 1px;
+    width: 200px;
+}
+
+.subMenucomittmentMenu li.sel, .subMenucomittmentMenu li.current_page_item{
+	background: none repeat scroll 0 0 #808080;
+}
+
+.subMenucomittmentMenu a{
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-left: 7px;
+}
+
+.singleSideBarComittmentPage #content {
+	float: left;
+	width:600px;
+}
+
+.subMenucomittmentMenu a:focus,
+.subMenucomittmentMenu a:active,
+.subMenucomittmentMenu a:hover {
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.page-template-jobsPage-php .entry-content {
+	border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.page-template-jobsPage-php .content-page{
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+li {
+	font-size:13px;
+	list-style: disc outside none;
+}
+
+.page-template-jobsPage-php .singular.page .hentry{
+	   
+}
+
+.jobMail {
+	
+	float: right;
+	font-size: 90%;
+	
+}
+
+.jobMailImage {
+	background: url(images/mail.png) 0px 0  no-repeat;
+	height:19px;
+	width:26px;
 }

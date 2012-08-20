@@ -18,27 +18,44 @@ get_header(); ?>
 <div id="primary" class="singleSideBarPage">
 			<div id="content" role="main">
 
-				<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php get_template_part( 'content', 'page' ); ?>
+
+					<?php comments_template( '', true ); ?>
+
+				<?php endwhile; // end of the loop. ?>
+
+
+
+				
 <?php
 	$args = array( 'post_type' => 'jobs', 'posts_per_page' => 10 );
 	$loop = new WP_Query( $args );
 	while ( $loop->have_posts() ) : $loop->the_post();
 
-		echo '<h3>' . the_title() . '</h3>';
+		
 		echo '<div class="entry-content">';
+		
+		echo the_title('<h2>', '</h2>', false);
+		//$themeDirectory = bloginfo('stylesheet_directory');
+		
+
+
+		echo '<a class="jobMail" href="mailto:info@vipelectrical.com.au?Subject=' . the_title('','',false) .'">
+		<img src="/mail.png" />
+		 Send Email</a>';
+
+
+		echo '<h4>' . the_date() . '</h4>';
 		?>
-			<span class="sectionOne">
+			<div class="sectionOne" data-hidden="true" >
 				<? //echo strlen(the_content_as_string()); ?>
-				<? echo substr(the_content_as_string(), 0, 200); ?>
-			</span>
-			<a href="#">Read More</a>
-			<span class="sectionTwo">
-			<?php
-				echo substr(the_content_as_string(), 31, strlen(the_content_as_string()));
-			?>
-			</span>
+				<? echo the_content_as_string(); ?>
+				
+			</div>
+			<a href="#" class="dynamic" >Read More</a>
+			 
 		<?php
 		echo '</div>';
 	endwhile;
@@ -50,11 +67,29 @@ get_header(); ?>
 
 <script type="text/javascript">
 	//alert('wake up');
-	jQuery('.entry-content').css('margin-bottom', '100px');
-	jQuery('.entry-content .sectionTwo').hide();
+	//jQuery('.entry-content').css('margin-bottom', '100px');
+	//jQuery('.entry-content .sectionTwo').hide();
+	// jQuery('.entry-content .sectionTwo').show();
 
-	jQuery('.entry-content a').click(function (e){
+	jQuery('.entry-content .sectionOne').css({height : '70px', overflow : 'hidden'});
+
+	jQuery('a.dynamic').click(function (e){
 		e.preventDefault();
-		 jQuery(this).css('color', 'red');
+		 //jQuery(this).css('color', 'red');
+		 //e.css('font-size', '25px');
+		 var sectionOne = jQuery(this).prev();
+
+		 if ( sectionOne.data("hidden") === true ){
+		 	// sectionOne.show();
+		 	jQuery(this).html("Hide");
+		 	sectionOne.css({ height : '100%'});
+		 	sectionOne.data("hidden", false);
+		 }
+		 else {
+		 	jQuery(this).html("Read More");
+		 	sectionOne.css({height : '70px'});
+		 	sectionOne.data("hidden", true);
+		 }
+
 	});
 </script>

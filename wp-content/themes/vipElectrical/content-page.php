@@ -10,10 +10,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php if ( get_post_meta($post->ID , 'custom_title', $single = true) != null) { 
+							 echo '<h1 class="entry-title">' . 
+							 get_post_meta($post->ID , 'custom_title', $single = true)
+							 .'</h1>';
+						 } else { ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php } ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content content-page">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

@@ -72,9 +72,18 @@
 <body <?php // body_class(); ?> <?php vipelectrical_body_class(); ?> >
 <h2><?php will_get_page_template(); ?></h2>    <div id="topPage">
 			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				    <h1 id="site-title"><span>
+                    
+                        <?php bloginfo( 'name' ); ?></span></h1>
+                </a>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-                                <h3 id="phone">8424 3777</h3>
+                 
+<?php  
+    $my_id = CONTACT_ID;
+    $contact_post = get_post( $my_id );
+    ?>
+                                <a href="<?php echo $contact_post->guid; ?>"><h3 id="phone">8424 3777</h3></a>
 			</hgroup>
       </div>
     <div id="navContainer">
@@ -86,7 +95,7 @@
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
-            <div class="clear">&nbsp;</div>
+           
        </div>
     <div id ="pageBackground">
         <div id="pageBackgroundImage">

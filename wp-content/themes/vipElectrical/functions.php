@@ -1,6 +1,7 @@
 <?php
 
 //if ( function_exists('register_sidebars') )
+
 //register_sidebars(3);
 
 add_action('init', 'create_post_type');
@@ -113,3 +114,91 @@ function enable_more_buttons($buttons) {
   return $buttons;
 }
 add_filter("mce_buttons", "enable_more_buttons");
+
+function hierarchical_submenu($post, $menuId) {
+    $top_post = $post;
+    // If the post has ancestors, get its ultimate parent and make that the top post
+    if ($post->post_parent && $post->ancestors) {
+        $top_post = get_post(end($post->ancestors));
+    }
+    // Always start traversing from the top of the tree
+    return hierarchical_submenu_get_children($top_post, $post, $menuId);
+}
+
+function simple_submenu($post, $menuId) {
+    $top_post = $post;
+    // If the post has ancestors, get its ultimate parent and make that the top post
+    if ($post->post_parent && $post->ancestors) {
+        $top_post = get_post(end($post->ancestors));
+    }
+    // Always start traversing from the top of the tree
+    return hierarchical_submenu_get_children_one_parent($top_post, $post, $menuId);
+}
+
+function hierarchical_submenu_get_children($post, $current_page, $menuId) {
+    $menu = '';
+    // Get all immediate children of this page
+    $children = get_pages('child_of=' . $post->ID . '&parent=' . $post->ID . '&sort_column=menu_order&sort_order=ASC');
+    
+    // echo '<pre>';
+    // //print_r($children);
+    // echo '</pre>';
+
+    if ($children) {
+        $menu = '<ul class="subMenu'. $menuId .'">';
+        foreach ($children as $child) {
+            // If the child is the viewed page or one of its ancestors, highlight it
+            if (in_array($child->ID, get_post_ancestors($current_page)) || ($child->ID == $current_page->ID)) {
+                $menu .= '<li class="sel"><a href="' . get_permalink($child) . '" class="sel">
+                ' . $child->post_title . '</a>';
+                // echo '<h2>A</h2>';
+            } else {
+                $menu .= '<li><a href="' . get_permalink($child) . '">' . $child->post_title . '</a>';
+                // echo '<h2>B</h2>';
+                 }
+            // If the page has children and is the viewed page or one of its ancestors, get its children
+            if (get_children($child->ID) && (in_array($child->ID, get_post_ancestors($current_page)) || ($child->ID == $current_page->ID))) {
+                $menu .= hierarchical_submenu_get_children($child, $current_page, $menuId);
+            }
+            $menu .= "</li>\n";
+        }
+        $menu .= "</ul>\n";
+    }
+    return $menu;
+}
+
+
+function hierarchical_submenu_get_children_one_parent($post, $current_page, $menuId) {
+    $menu = '';
+    // Get all immediate children of this page
+    $children = get_pages('child_of=' . $post->ID . '&parent=' . $post->ID . '&sort_column=menu_order&sort_order=ASC');
+    
+    // echo '<pre>';
+    // //print_r($children);
+    // echo '</pre>';
+
+    if ($children) {
+        $menu = '<ul class="subMenu'. $menuId .'">';
+        //foreach ($children as $child) {
+            // If the child is the viewed page or one of its ancestors, highlight it
+            if (in_array($post->ID, get_post_ancestors($current_page)) || ($post->ID == $current_page->ID)) {
+                $menu .= '<li class="sel"><a href="' . get_permalink($post) . '" class="sel">
+                ' . $post->post_title . '</a>';
+                // echo '<h2>A</h2>';
+            } else {
+                $menu .= '<li><a href="' . get_permalink($post) . '">' . $post->post_title . '</a>';
+                // echo '<h2>B</h2>';
+                 }
+            // If the page has children and is the viewed page or one of its ancestors, get its children
+            if (get_children($post->ID) && (in_array($post->ID, get_post_ancestors($current_page)) || ($post->ID == $current_page->ID))) {
+                $menu .= hierarchical_submenu_get_children($post, $current_page, $menuId);
+            }
+            $menu .= "</li>\n";
+        }
+        $menu .= "</ul>\n";
+   
+    return $menu;
+}
+
+
+
