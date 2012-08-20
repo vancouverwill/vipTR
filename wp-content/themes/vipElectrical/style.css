@@ -632,6 +632,8 @@ a:hover {
 
 #navContainer{
     clear: both;
+    position: relative;
+    z-index: 100;
 }
 
 #access {
@@ -2900,3 +2902,8 @@ ul.blog_categories{
         idth:900px;
       	display:none;  
     }
+
+.clear {
+	clear: both;
+	height: ;
+}

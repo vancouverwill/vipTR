@@ -86,6 +86,7 @@
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
+            <div class="clear">&nbsp;</div>
        </div>
     <div id ="pageBackground">
         <div id="pageBackgroundImage">
@@ -138,4 +139,4 @@
             <div id="main">
                 <div id="mainFold">&nbsp;</div>
                <!-- <div class="mainContentImage" style="background:url(<? echo $image_url; ?>);">&nbsp;</div> -->
-               <img class="mainContentImage" src="<? echo $image_url; ?>" />
+               <img class="mainContentImage" src="<?php echo $image_url; ?>" />

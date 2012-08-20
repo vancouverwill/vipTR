@@ -2677,3 +2677,8 @@ p.comment-form-comment {
 #ie7 section.recent-posts {
 	margin-right: 7.6%;
 }
+
+
+.clear{
+	clear:both;
+}
