@@ -577,7 +577,7 @@ a:hover {
 	z-index: 9999;
 }
 #site-title {
-        background: url(images/VIP_BANNER_LOGO.png);
+        background: url(images/VIP_BANNER_LOGO.png) no-repeat;
         float: left;
 	height:89px;
         left:50px;
@@ -658,6 +658,14 @@ a:hover {
         -webkit-box-shadow: 0 2px 3px #333;
         box-shadow: 0 2px 3px #333333;
 }
+
+#access .menu {
+	 background: url("./images/nav_bar.png") repeat-x scroll 0 0 transparent;
+	 height: 38px;
+}
+
+
+
 #access ul {
 	font-size: 13px;
 	list-style: none;

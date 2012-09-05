@@ -47,6 +47,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link media="only screen and (max-device-width: 640px)" href="/iphone.css" type="text/css" rel="stylesheet" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600,600italic,700,400italic,300' rel='stylesheet' type='text/css'>
 
