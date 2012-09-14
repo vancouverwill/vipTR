@@ -14,5 +14,27 @@
 
 
 #main #content {
-	width: 530px;
+	width: 370px;
+}
+
+#custom-bg {
+
+}
+
+.blog #main #content {
+	width : 760px;
+	margin-left: 60px;
+}
+
+.post .entry-content{
+	width : 760px;
+}
+
+.blogContentBox {
+	width: 405px;
+}
+
+
+#page {
+	width: 880px;
 }
