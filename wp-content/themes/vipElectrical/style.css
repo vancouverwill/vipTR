@@ -611,7 +611,8 @@ a:hover {
 }
 
 #phone{    
-        background: url(images/header_phone.png) no-repeat;
+        ##ackground: url(images/header_phone.png) no-repeat;
+        background: url(images/vip_linkedin.png) no-repeat;
         float:right;
         height:59px;
         left:633px;

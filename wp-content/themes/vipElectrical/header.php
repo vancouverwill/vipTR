@@ -48,6 +48,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link media="only screen and (max-device-width: 640px)" href="/iphone.css" type="text/css" rel="stylesheet" />
+<link media="only screen and (max-device-width: 490px)" href="/android.css" type="text/css" rel="stylesheet" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600,600italic,700,400italic,300' rel='stylesheet' type='text/css'>
 
@@ -84,7 +85,7 @@
     $my_id = CONTACT_ID;
     $contact_post = get_post( $my_id );
     ?>
-                                <a href="<?php echo $contact_post->guid; ?>"><h3 id="phone">8424 3777</h3></a>
+                                <a href="http://www.linkedin.com/company/vip-electrical" target="_blank" ><h3 id="phone">8424 3777</h3></a>
 			</hgroup>
       </div>
     <div id="navContainer">
