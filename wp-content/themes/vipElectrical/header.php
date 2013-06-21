@@ -160,7 +160,7 @@
                <script type="text/javascript">
 
                     //rotation speed and timer
-                    var speed = 3000;
+                    var speed = 6000;
                     var run = setInterval('rotate()', speed);
 
 
@@ -173,7 +173,7 @@
                         jQuery('#right_scroll img').click(function(){
                         
                             //get the width of the items ( i like making the jquery part dynamic, so if you change the width in the css you won't have o change it here too ) '
-                            var item_width = jQuery('#carousel_ul li').outerWidth() + 10;
+                            var item_width = jQuery('#carousel_ul li').outerWidth();
 
                             console.log(jQuery('#carousel_ul').css('left'));
                             console.log(item_width);
@@ -232,10 +232,6 @@ width:901px; /* important (this width = width of list item(including margin) * i
 overflow: hidden;  /* important (hide the items outside the div) */
 /* non-important styling bellow */
 background: #F0F0F0;
-
-/* wills editions */
- osition: relative;
- -index: -10;
 }
 
 #carousel_ul {
@@ -269,14 +265,15 @@ cursor:pointer;
 cursor: hand; 
 border:0px; 
 }
+
 #left_scroll, #right_scroll{
 float:left; 
 height:32px; 
 width:32px; 
 background: #C0C0C0; 
 position:absolute;
-top: 100px;
-z-index:20px;
+top: 150px;
+z-index:20;
 }
 
 #left_scroll img, #right_scroll img{
@@ -286,14 +283,14 @@ cursor: hand;
 }
 
 #left_scroll {
-left:0px;
+    left: -15px;
 }
 
 #right_scroll {
-right:0px;
+     right: -16px;
 }
 </style>
-
+            <div id="main">
                 <div id='carousel_container'>
                   <div id='left_scroll'><img src='/wp-content/themes/vipElectrical/images/home_image_button_left.png' /></div>
                     <div id='carousel_inner'>
