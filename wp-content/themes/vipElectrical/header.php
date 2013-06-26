@@ -153,6 +153,7 @@
 
             <div id="main">
                 <div id="mainFold">&nbsp;</div>
+                
                <!-- <div class="mainContentImage" style="background:url(<? echo $image_url; ?>);">&nbsp;</div> -->
                <img class="mainContentImage" src="<?php echo $image_url; ?>" />
             <? } else { ?>
@@ -170,7 +171,7 @@
                         
                         
                         //when user clicks the right image for background sliding left        
-                        jQuery('#right_scroll img').click(function(){
+                        jQuery('#right_scroll').click(function(){
                         
                             //get the width of the items ( i like making the jquery part dynamic, so if you change the width in the css you won't have o change it here too ) '
                             var item_width = jQuery('#carousel_ul li').outerWidth();
@@ -195,9 +196,9 @@
                         });
                         
                         //when user clicks the left image for background sliding left
-                        jQuery('#left_scroll img').click(function(){
+                        jQuery('#left_scroll').click(function(){
                             
-                            var item_width = jQuery('#carousel_ul li').outerWidth() + 10;
+                            var item_width = jQuery('#carousel_ul li').outerWidth();
                             
                             /* same as for sliding right except that it's current left indent + the item width (for the sliding right it's - item_width) */
                             var left_indent = parseInt(jQuery('#carousel_ul').css('left')) + item_width;
@@ -218,7 +219,7 @@
                     //a simple function to click next link
                     //a timer will call this function, and the rotation will begin :)  
                     function rotate() {
-                        jQuery('#right_scroll img').click();
+                        // jQuery('#right_scroll').click();
                     }
                 </script>
 <style type="text/css">
@@ -276,7 +277,7 @@ top: 150px;
 z-index:20;
 }
 
-#left_scroll img, #right_scroll img{
+#left_scroll, #right_scroll{
 /*styling*/
 cursor: pointer;
 cursor: hand;
@@ -289,18 +290,23 @@ cursor: hand;
 #right_scroll {
      right: -16px;
 }
+
 </style>
             <div id="main">
-                <div id='carousel_container'>
-                  <div id='left_scroll'><img src='/wp-content/themes/vipElectrical/images/home_image_button_left.png' /></div>
+		<div id="mainFold">&nbsp;</div>
+        <div id="mainRollover" style="background:url('./text_overlay.png') no-repeat;
+height:106px;
+width:510px; top: 206px; left: -1px;  position: absolute; z-index: 20;">&nbsp;</div>
+		<div id='carousel_container'>
+                  <div id='left_scroll' style="background:url('/wp-content/themes/vipElectrical/images/home_image_button_left.png') no-repeat transparent; width:32px; height:32px;">&nbsp;</div>
                     <div id='carousel_inner'>
                         <ul id='carousel_ul'>
-                            <li><a href='#'><img src="/wp-content/themes/vipElectrical/images/vip_home_1_image.jpg" width="901px" height="338px" /></a></li>
+                            <li><a href='#'><img src="/wp-content/themes/vipElectrical/images/vip_home_1.5_image.jpg" width="901px" height="338px" /></a></li>
                             <li><a href='#'><img src="/wp-content/themes/vipElectrical/images/vip_home_2_image.jpg" width="901px" height="338px" /></a></li>
                             <li><a href='#'><img src="/wp-content/themes/vipElectrical/images/vip_home_3_image.jpg" width="901px" height="338px" /></a></li>
                         </ul>
                     </div>
-                  <div id='right_scroll'><img src='/wp-content/themes/vipElectrical/images/home_image_button_right.png' /></div>
+                  <div id='right_scroll' style="background:url('/wp-content/themes/vipElectrical/images/home_image_button_right.png') no-repeat transparent; width:32px; height:32px;">&nbsp;</div>
                 </div>
             <?php } ?>
 

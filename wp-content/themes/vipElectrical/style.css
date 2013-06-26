@@ -3091,3 +3091,9 @@ background: #C0C0C0;
 cursor: pointer;
 cursor: hand;
 }
+
+#mainRollover{
+background:url('./images/text_overlay.png') no-repeat;
+height:106px;
+width:510px;
+}

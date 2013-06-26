@@ -19,6 +19,9 @@ get_header(); ?>
 		<div id="primary" class="singleSideBarComittmentPage">
 <?php
 $my_id = CAPABILITIES_ID;
+var_dump($my_id);
+var_dump($my_id);
+var_dump($my_id);
 $my_post = get_post($my_id);
 $children = wp_list_pages('title_li&child_of='.$my_post->ID.'&echo=0');
 
@@ -31,6 +34,7 @@ if($post->ID == $my_post->ID) {
 else {
 	$sel = 'notSelected';
 }
+//var_dump($children);
 
 if ($children) {
 	?>
@@ -43,7 +47,7 @@ if ($children) {
 			</li> -->
 			<?php echo $children; ?>
 		</ul>
-<?php } 
+<?php }   
 ?>
 			<div id="content" role="main">
 
