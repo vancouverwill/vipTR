@@ -18,12 +18,12 @@ get_header(); ?>
 
 		<div id="primary" class="singleSideBarComittmentPage">
 <?php
-$my_id = CAPABILITIES_ID;
-var_dump($my_id);
-var_dump($my_id);
-var_dump($my_id);
+// $my_id = WHAT_WE_DO_ID;
+$my_id = 395;
+
 $my_post = get_post($my_id);
-$children = wp_list_pages('title_li&child_of='.$my_post->ID.'&echo=0');
+// $children = wp_list_pages('title_li&child_of='.$my_post->ID.'&echo=0');
+$children = wp_list_pages('title_li&child_of=65&echo=0');
 
 $sel = '';
 

@@ -219,7 +219,7 @@
                     //a simple function to click next link
                     //a timer will call this function, and the rotation will begin :)  
                     function rotate() {
-                        // jQuery('#right_scroll').click();
+                        jQuery('#right_scroll').click();
                     }
                 </script>
 <style type="text/css">
