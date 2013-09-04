@@ -76,16 +76,36 @@
 			<hgroup>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				    <h1 id="site-title"><span>
-                    
+
                         <?php bloginfo( 'name' ); ?></span></h1>
                 </a>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-                 
-<?php  
+
+<?php
     $my_id = CONTACT_ID;
-    $contact_post = get_post( $my_id );
+	$contact_post = get_post( $my_id );
+
+	// $user = mobile_user_agent_switch();
+
+	// echo '<h2>' . $user . '</h2>';
     ?>
-                                <a href="http://www.linkedin.com/company/vip-electrical" target="_blank" ><h3 id="phone">8424 3777</h3></a>
+                                <!-- <a href="http://www.linkedin.com/company/vip-electrical" target="_blank" ><h3 id="phone">8424 3777</h3></a> -->
+                <a href="http://www.linkedin.com/company/vip-electrical" target="_blank" id="linkedin" ></a>
+
+                <?php if (mobile_user_agent_switch() == 'iphone' || mobile_user_agent_switch() == 'android') { ?>
+				<a href="tel:8424 3777" id="phone" >
+                </a>
+
+                <? } else { ?>
+                <div id="phone" >
+		</div>
+		<?php } ?>
+               <!--  <a href="tel:+61884243777" id="" >+61 8 8424 3777 </a> -->
+              <!--   <div id="">+61 8 8424 3777</div>
+                <div id="phone">(618) 8424-3777</div>
+
+                <div id="">(618) 8424-3777
+                </div> -->
 			</hgroup>
       </div>
     <div id="navContainer">
@@ -97,12 +117,12 @@
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
-           
+
        </div>
     <div id ="pageBackground">
         <div id="pageBackgroundImage">
            <div id="page" class="hfeed">
-            <header id="branding" role="banner">                 
+            <header id="branding" role="banner">
                             <?php
                                     // Check to see if the header image has been removed
                                     $header_image = get_header_image();
@@ -137,7 +157,7 @@
                                     <?php //get_search_form(); ?>
                             <?php endif; ?>
 
-                
+
             </header><!-- #branding -->
 
             <?php
@@ -148,16 +168,16 @@
 
             ?>
             <?php $post = $wp_query->get_queried_object();
-                    $pagename = $post->post_name; 
+                    $pagename = $post->post_name;
             if ($pagename != 'home') { ?>
 
             <div id="main">
                 <div id="mainFold">&nbsp;</div>
-                
+
                <!-- <div class="mainContentImage" style="background:url(<? echo $image_url; ?>);">&nbsp;</div> -->
                <img class="mainContentImage" src="<?php echo $image_url; ?>" />
             <? } else { ?>
-                
+
                <script type="text/javascript">
 
                     //rotation speed and timer
@@ -167,57 +187,57 @@
 
                   jQuery(document).ready(function() {
                         //move he last list item before the first item. The purpose of this is if the user clicks to slide left he will be able to see the last item.
-                        jQuery('#carousel_ul li:first').before(jQuery('#carousel_ul li:last')); 
-                        
-                        
-                        //when user clicks the right image for background sliding left        
+                        jQuery('#carousel_ul li:first').before(jQuery('#carousel_ul li:last'));
+
+
+                        //when user clicks the right image for background sliding left
                         jQuery('#right_scroll').click(function(){
-                        
+
                             //get the width of the items ( i like making the jquery part dynamic, so if you change the width in the css you won't have o change it here too ) '
                             var item_width = jQuery('#carousel_ul li').outerWidth();
 
                             console.log(jQuery('#carousel_ul').css('left'));
                             console.log(item_width);
-                            
+
                             //calculae the new left indent of the unordered list
                             var left_indent = parseInt(jQuery('#carousel_ul').css('left')) - item_width;
 
                             console.log(left_indent);
-                            
+
                             //make the sliding effect using jquery's anumate function '
-                            jQuery('#carousel_ul:not(:animated)').animate({'left' : left_indent},1000,function(){    
-                                
+                            jQuery('#carousel_ul:not(:animated)').animate({'left' : left_indent},1000,function(){
+
                                 //get the first list item and put it after the last list item (that's how the infinite effects is made) '
-                                jQuery('#carousel_ul li:last').after(jQuery('#carousel_ul li:first')); 
-                                
+                                jQuery('#carousel_ul li:last').after(jQuery('#carousel_ul li:first'));
+
                                 //and get the left indent to the default -210px
                                 jQuery('#carousel_ul').css({'left' : '-' + item_width + 'px'});
-                            }); 
+                            });
                         });
-                        
+
                         //when user clicks the left image for background sliding left
                         jQuery('#left_scroll').click(function(){
-                            
+
                             var item_width = jQuery('#carousel_ul li').outerWidth();
-                            
+
                             /* same as for sliding right except that it's current left indent + the item width (for the sliding right it's - item_width) */
                             var left_indent = parseInt(jQuery('#carousel_ul').css('left')) + item_width;
-                            
-                            jQuery('#carousel_ul:not(:animated)').animate({'left' : left_indent},1000,function(){    
-                            
-                            /* when sliding to left we are moving the last item before the first list item */            
-                            jQuery('#carousel_ul li:first').before(jQuery('#carousel_ul li:last')); 
-                            
+
+                            jQuery('#carousel_ul:not(:animated)').animate({'left' : left_indent},1000,function(){
+
+                            /* when sliding to left we are moving the last item before the first list item */
+                            jQuery('#carousel_ul li:first').before(jQuery('#carousel_ul li:last'));
+
                             /* and again, when we make that change we are setting the left indent of our unordered list to the default -210px */
                             jQuery('#carousel_ul').css({'left' : '-' + item_width + 'px'});
                             });
-                            
-                            
+
+
                         });
                   });
 
                     //a simple function to click next link
-                    //a timer will call this function, and the rotation will begin :)  
+                    //a timer will call this function, and the rotation will begin :)
                     function rotate() {
                         jQuery('#right_scroll').click();
                     }
@@ -229,7 +249,7 @@
 
 #carousel_inner {
 float:left; /* important for inline positioning */
-width:901px; /* important (this width = width of list item(including margin) * items shown */ 
+width:901px; /* important (this width = width of list item(including margin) * items shown */
 overflow: hidden;  /* important (hide the items outside the div) */
 /* non-important styling bellow */
 background: #F0F0F0;
@@ -247,31 +267,31 @@ padding-bottom:10px;
 }
 
 #carousel_ul li{
-float: left; /* important for inline positioning of the list items */                                    
+float: left; /* important for inline positioning of the list items */
 width: 901px;  /* fixed width, important */
 /* just styling bellow*/
 padding:0px;
 height:338px;
 background: #000000;
 margin-top:0px;
-margin-bottom:0px; 
-margin-left:0px; 
-margin-right:0px; 
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px;
 }
 
 #carousel_ul li img {
 .margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
 /* styling */
 cursor:pointer;
-cursor: hand; 
-border:0px; 
+cursor: hand;
+border:0px;
 }
 
 #left_scroll, #right_scroll{
-float:left; 
-height:32px; 
-width:32px; 
-background: #C0C0C0; 
+float:left;
+height:32px;
+width:32px;
+background: #C0C0C0;
 position:absolute;
 top: 150px;
 z-index:20;
@@ -310,5 +330,5 @@ width:510px; top: 206px; left: -1px;  position: absolute; z-index: 20;">&nbsp;</
                 </div>
             <?php } ?>
 
-                
+
 

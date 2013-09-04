@@ -1,7 +1,7 @@
 /*
 Theme Name:     vipElectrical
 Theme URI:      http://example.com/
-Description:    Child theme for the Twenty Eleven theme 
+Description:    Child theme for the Twenty Eleven theme
 Author:         Will Melbourne
 Author URI:     http://willmelbourne.com
 Template:       twentyeleven
@@ -66,7 +66,7 @@ footer, header, hgroup, menu, nav, section {
 
 /* =Structure
 ----------------------------------------------- */
-html {    
+html {
 }
 
 body {
@@ -91,7 +91,7 @@ body {
 
 #pageBackgroundImage{
     background: url(./images/backgroundCrossImage.png) no-repeat center top;
-    
+
 }
 
 #page {
@@ -132,7 +132,7 @@ body {
 	position: relative;
 	width: 820px;
 }
-   
+
 #primary .homeContent{
           float: left;
         margin: 10px 0 0 40px;
@@ -145,7 +145,7 @@ body {
 
 .homeSidebar{
     float:left;
-    margin-left: 21px;	
+    margin-left: 21px;
     padding-bottom: 50px;
     padding-left: 40px;
     padding-top: 37px;
@@ -610,16 +610,25 @@ a:hover {
         width: 0;
 }
 
-#phone{    
-        ##ackground: url(images/header_phone.png) no-repeat;
-        background: url(images/vip_linkedin.png) no-repeat;
-        float:right;
+#phone{
+        background: url(images/call_button.png) no-repeat;
+        loat:right;
         height:59px;
         left:633px;
         position: absolute;
-        text-indent: -3000px;
+        ext-indent: -3000px;
         top: 35px;
-        width:227px;        
+        width:164px;
+}
+
+#linkedin {
+
+        background: url(images/linkdn_button.png) no-repeat;
+        height:59px;
+	position: absolute;
+	left:805px;
+	top:35px;
+	width:63px;
 }
 
 #branding img {
@@ -654,7 +663,7 @@ a:hover {
         height: 38px;
 	margin: 0 auto 0px;
 	width: 100%;
-        
+
         -moz-box-shadow: 0 2px 3px #333;
         -webkit-box-shadow: 0 2px 3px #333;
         box-shadow: 0 2px 3px #333333;
@@ -713,7 +722,7 @@ a:hover {
 
 
 #access ul ul a {
-	
+
 	border-bottom: 0px dotted #ddd;
 	color: #fff;
 	font-size: 13px;
@@ -2355,10 +2364,70 @@ p.comment-form-comment {
 ----------------------------------------------- */
 
 #colophon {
-        
+	background: #828282;
 	clear: both;
-	margin-bottom: 50px;
+	margin-bottom: 0;
+    padding-bottom: 30px;
 }
+
+#colophon .menu {
+	margin: auto;
+	width : 900px;
+}
+
+#colophon ul {
+	margin-left: 30px;
+}
+
+#colophon ul ul{
+	margin-left: 0px;
+	}
+
+#colophon a{
+	
+}
+
+#colophon li {
+	margin-left: 10px;
+}
+
+#colophon li li, #colophon ul ul{
+	margin-left: 0px;
+}
+
+#colophon ul li {
+	float :left;
+	font-weight: normal;
+	list-style: none;
+	margin-right: 27px;
+}
+
+#colophon ul li a{
+
+	font-weight: bold;
+}
+
+#colophon ul li ul li a{
+	color: #d3d3d3;
+	font-weight: normal;
+}
+
+#colophon li a{
+	color:#fffeff;
+	font-weight:bold;
+	text-align: left;
+}
+
+#colophon li li{
+	float : none;
+	margin-right: 0;
+	max-width: 130px;
+}
+
+#colophon .page-item-12  li {
+	max-width: 100px;
+}
+
 #supplementary {
 	border-top: 1px solid #ddd;
 	padding: 1.625em 7.6%;
@@ -2387,7 +2456,7 @@ p.comment-form-comment {
 
 /* Site Generator Line */
 #site-generator {
-	background:url('images/footer.png') repeat-x center top;
+	background:url('images/footer_gradient.png') repeat-x center top;
 	border-top: 1px solid #ddd;
 	color: #666;
         height:31px;
@@ -2698,16 +2767,16 @@ p.comment-form-comment {
 		border-top: none;
 		box-shadow: none;
 	}
-        
-    
-        
+
+
+
 	#primary {
 		float: left;
 		margin: 0;
 		width: 100%;
 	}
-       
-        
+
+
 	#content {
 		margin: 0;
 		width: auto;
@@ -2925,7 +2994,7 @@ ul.blog_categories{
 .blog .mainContentImage {
         eight:338px;
         idth:900px;
-      	display:none;  
+      	display:none;
     }
 
 
@@ -3013,19 +3082,23 @@ li {
 }
 
 .page-template-jobsPage-php .singular.page .hentry{
-	   
+
 }
 
 .jobMail {
-	
+
 	float: right;
 	font-size: 90%;
-	
+
 }
 
 .jobMailImage {
 	background: url(images/mail.png) 0px 0  no-repeat;
 	height:19px;
 	width:26px;
+}
+
+#clear {
+	clear: both;
 }
 

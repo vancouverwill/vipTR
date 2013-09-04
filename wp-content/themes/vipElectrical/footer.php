@@ -9,9 +9,10 @@
  * @since Twenty Eleven 1.0
  */
 ?>
+<div id="clear"></div>
 
                 </div><!-- #main -->
-
+            </div><!-- #page -->
                 <footer id="colophon" role="contentinfo">
 
                                 <?php
@@ -27,8 +28,10 @@
                                         <!-- <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a> -->
                                     
                                 </div>
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                            <div class="clear">&nbsp;</div>
                 </footer><!-- #colophon -->
-        </div><!-- #page -->
+        
     </div><!-- #pageBackgroundImage -->
 </div><!-- #pageBackground -->
 

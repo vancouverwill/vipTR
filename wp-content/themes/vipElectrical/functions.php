@@ -6,14 +6,14 @@
 
 add_action('init', 'create_post_type');
 function create_post_type() {
-    
+
     register_post_type('jobs',
         array(
             'labels' => array(
                 'name' => 'Jobs',
                 'singular_name' => 'Job',
                 'menu_name' => 'Job Board',
-            ),   
+            ),
             'public' => true,
             'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
         )
@@ -104,13 +104,13 @@ function will_get_page_template() {
 
 function enable_more_buttons($buttons) {
   $buttons[] = 'hr';
- 
-  /* 
+
+  /*
   Repeat with any other buttons you want to add, e.g.
 	  $buttons[] = 'fontselect';
 	  $buttons[] = 'sup';
   */
- 
+
   return $buttons;
 }
 add_filter("mce_buttons", "enable_more_buttons");
@@ -139,7 +139,7 @@ function hierarchical_submenu_get_children($post, $current_page, $menuId) {
     $menu = '';
     // Get all immediate children of this page
     $children = get_pages('child_of=' . $post->ID . '&parent=' . $post->ID . '&sort_column=menu_order&sort_order=ASC');
-    
+
     // echo '<pre>';
     // //print_r($children);
     // echo '</pre>';
@@ -172,7 +172,7 @@ function hierarchical_submenu_get_children_one_parent($post, $current_page, $men
     $menu = '';
     // Get all immediate children of this page
     $children = get_pages('child_of=' . $post->ID . '&parent=' . $post->ID . '&sort_column=menu_order&sort_order=ASC');
-    
+
     // echo '<pre>';
     // //print_r($children);
     // echo '</pre>';
@@ -196,8 +196,33 @@ function hierarchical_submenu_get_children_one_parent($post, $current_page, $men
             $menu .= "</li>\n";
         }
         $menu .= "</ul>\n";
-   
+
     return $menu;
+}
+
+/*
+*   Mobile device detection
+*/
+if( !function_exists('mobile_user_agent_switch') ){
+    function mobile_user_agent_switch(){
+        $device = '';
+
+        if( stristr($_SERVER['HTTP_USER_AGENT'],'ipad') ) {
+            $device = "ipad";
+        } else if( stristr($_SERVER['HTTP_USER_AGENT'],'iphone') || strstr($_SERVER['HTTP_USER_AGENT'],'iphone') ) {
+            $device = "iphone";
+        } else if( stristr($_SERVER['HTTP_USER_AGENT'],'blackberry') ) {
+            $device = "blackberry";
+        } else if( stristr($_SERVER['HTTP_USER_AGENT'],'android') ) {
+            $device = "android";
+        }
+
+        if( $device ) {
+            return $device;
+        } return false; {
+            return false;
+        }
+    }
 }
 
 

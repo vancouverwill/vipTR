@@ -36,8 +36,10 @@ get_header(); ?>
 
 		
 		echo '<div class="entry-content">';
+
+		// echo get_permalink( );
 		
-		echo the_title('<h2>', '</h2>', false);
+		echo the_title('<h2><a href="' . get_permalink( ) . '">', '</a></h2>', false);
 		//$themeDirectory = bloginfo('stylesheet_directory');
 		
 
@@ -51,10 +53,15 @@ get_header(); ?>
 		?>
 			<div class="sectionOne" data-hidden="true" >
 				<? //echo strlen(the_content_as_string()); ?>
-				<? echo the_content_as_string(); ?>
+				<? $content = the_content_as_string();
+				$pos=strpos($content, ' ', 500);
+				$new_content = substr($content,0,$pos ); 
+
+				echo $new_content; ?>
 				
 			</div>
-			<a href="#" class="dynamic" >Read More</a>
+			<a href="<?php echo get_permalink(); ?>" class="" >Read More</a>
+			<!-- <a href="#" class="dynamic" >Read More</a> -->
 			 
 		<?php
 		echo '</div>';
@@ -71,7 +78,7 @@ get_header(); ?>
 	//jQuery('.entry-content .sectionTwo').hide();
 	// jQuery('.entry-content .sectionTwo').show();
 
-	jQuery('.entry-content .sectionOne').css({height : '70px', overflow : 'hidden'});
+	//jQuery('.entry-content .sectionOne').css({height : '70px', overflow : 'hidden'});
 
 	jQuery('a.dynamic').click(function (e){
 		e.preventDefault();
